@@ -1,14 +1,15 @@
 import { AppShell, Box } from "@mantine/core";
 
-import PageLoadingIndicator from "./PageLoadingIndicator";
+import PageLoadingIndicator from "./page-loading-indicator";
 import Sidebar from "./sidebar";
-import Topbar from "./TopBar";
+import Topbar from "./top-bar";
 
 type Props = {
     children: React.ReactNode;
+    p?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 }
 function Shell(props: Props) {
-    const { children } = props;
+    const { children, p } = props;
 
     return (
         <AppShell
@@ -17,7 +18,7 @@ function Shell(props: Props) {
         >
             <Box>
                 <Topbar />
-                <Box p="md">
+                <Box p={p}>
                 <PageLoadingIndicator topOffset="100px">{children}</PageLoadingIndicator>
                 </Box>
             </Box>

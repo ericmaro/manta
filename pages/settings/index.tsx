@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Shell from '@/components/shell/shell'
+import Shell from '@/components/shell'
 import { Text } from '@mantine/core'
-import ShellTopBarLeft from '@/components/shell/ShellTopBarLeft'
+import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
+import SettingsShell from '@/components/ui/settings/settings-shell'
 
-export default function Events() {
+export default function Settings() {
   return (
     <>
       <Head>
@@ -16,7 +17,10 @@ export default function Events() {
         <ShellTopBarLeft title='Settings'>
 
         </ShellTopBarLeft>
-        <Text>Page Content Here</Text>
+        <SettingsShell>
+          <Text>Page Content Here</Text>
+        </SettingsShell>
+
 
       </Shell>
     </>

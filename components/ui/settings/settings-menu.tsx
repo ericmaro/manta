@@ -1,76 +1,72 @@
-import { Box, Flex, Navbar } from "@mantine/core";
-import { SidebarNav } from "./sidebar-nav";
-import { Brand } from "./brand";
-import { User } from "./user";
+import { SidebarNav } from "@/components/shell/sidebar-nav";
+import { Box, Flex } from "@mantine/core";
 
 
-function Sidebar() {
+
+function SettingsMenu() {
 
     return (
         <Flex sx={(theme) => ({
             width: 240,
-            height: '100vh',
+            height: 'calc(100vh - 60px)',
             borderRight: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
                 }`,
         })}
             direction={"column"} >
-            {/* header */}
-            <Navbar.Section>
-                <Brand />
-            </Navbar.Section>
+
             {/* navigation */}
             <Box sx={{ flexGrow: 1, overflowY: 'scroll' }} py="md">
-               <SidebarNav
+                <SidebarNav
                     items={
                         [
                             {
-                                title: "Discovery",
+                                title: "System",
                                 items: [
                                     {
                                         title: "Overview",
                                         icon: "playCircle",
-                                        href: "/",
+                                        href: "/settings",
                                         items: [
-                                      
+
                                         ]
                                     },
                                     {
-                                        title: "Documents",
+                                        title: "General",
                                         icon: "fileText",
-                                        href: "/documents",
+                                        href: "/settings/general",
                                         items: []
                                     },
                                     {
-                                        title: "Events",
+                                        title: "Security",
                                         icon: "calendarClock",
-                                        href: "/events",
+                                        href: "/settings/security",
                                         items: []
                                     },
                                     {
-                                        title: "Settings",
+                                        title: "Profile",
                                         icon: "settings",
-                                        href: "/settings",
+                                        href: "/settings/profile",
                                         items: []
                                     }
                                 ]
                             },
                             {
-                                title: "Timed Documents",
+                                title: "Help",
                                 items: [
                                     {
-                                        title: "Upcoming",
+                                        title: "Documentation",
                                         icon: "calendarClock",
                                         href: "/documents/upcoming",
                                         items: []
                                     },
                                     {
-                                        title: "Expired",
+                                        title: "Tutorials",
                                         icon: "calendarCheck",
                                         href: "/documents/expired",
                                         items: []
                                     },
                                     {
-                                        title: "Active",
+                                        title: "Community",
                                         icon: "calendarCheck",
                                         href: "/documents/active",
                                         items: []
@@ -82,14 +78,11 @@ function Sidebar() {
                 />
             </Box>
 
-            {/* footer */}
-            <Navbar.Section>
-                <User />
-            </Navbar.Section>
+
 
 
         </Flex>
     );
 }
 
-export default Sidebar;
+export default SettingsMenu;

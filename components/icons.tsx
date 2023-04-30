@@ -33,7 +33,7 @@ import {
   Mic,
   Library,
   Calendar,
-CalendarClock,
+  CalendarClock,
   CalendarX as CalendarXIcon,
   CalendarCheck
 
@@ -79,10 +79,10 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
-  playCircle:PlayCircle,
-  layoutGrid:LayoutGrid,
-  radio:Radio,
-  listMusic:ListMusic,
+  playCircle: PlayCircle,
+  layoutGrid: LayoutGrid,
+  radio: Radio,
+  listMusic: ListMusic,
   mic: Mic,
   fileText: FileText,
   library: Library,
@@ -135,5 +135,9 @@ export const Icons = {
     <svg viewBox="0 0 24 24" {...props}>
       <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
     </svg>
+  ),
+  google: (props: LucideProps) => (
+    <svg viewBox="0 0 24 24" {...props}>
+     <path  fill="currentcolor" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>    </svg>
   ),
 }

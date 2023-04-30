@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Shell from '@/components/shell/shell'
+import Shell from '@/components/shell'
 import { Button, Text } from '@mantine/core'
-import ShellTopBarLeft from '@/components/shell/ShellTopBarLeft'
-import ShellTopBarRight from '@/components/shell/ShellTopBarRight'
+import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
+import ShellTopBarRight from '@/components/shell/shell-top-bar-right'
 import { FileText, Plus } from 'lucide-react'
 
 export default function Documents() {
@@ -14,7 +14,7 @@ export default function Documents() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Shell>
+      <Shell p='md'>
         <ShellTopBarLeft title='Documents'/>
         <ShellTopBarRight>
             <Button leftIcon={<FileText size={14} />}  color='brand' size='sm' onClick={() => {}}>New Document</Button>

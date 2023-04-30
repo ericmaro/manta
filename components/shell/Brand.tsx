@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Title } from '@mantine/core';
-import { ThemeToggle } from './ThemeToggle';
+import { ThemeToggle } from './theme-toggle';
 
 
 export function Brand() {
