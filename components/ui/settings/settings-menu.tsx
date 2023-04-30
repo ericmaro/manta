@@ -24,7 +24,7 @@ function SettingsMenu() {
                                 items: [
                                     {
                                         title: "Overview",
-                                        icon: "playCircle",
+                                        icon: "settings2",
                                         href: "/settings",
                                         items: [
 
@@ -32,19 +32,19 @@ function SettingsMenu() {
                                     },
                                     {
                                         title: "General",
-                                        icon: "fileText",
+                                        icon: "wrench",
                                         href: "/settings/general",
                                         items: []
                                     },
                                     {
                                         title: "Security",
-                                        icon: "calendarClock",
+                                        icon: "shieldCheck",
                                         href: "/settings/security",
                                         items: []
                                     },
                                     {
                                         title: "Profile",
-                                        icon: "settings",
+                                        icon: "userCog",
                                         href: "/settings/profile",
                                         items: []
                                     }
@@ -55,19 +55,19 @@ function SettingsMenu() {
                                 items: [
                                     {
                                         title: "Documentation",
-                                        icon: "calendarClock",
+                                        icon: "book",
                                         href: "/documents/upcoming",
                                         items: []
                                     },
                                     {
                                         title: "Tutorials",
-                                        icon: "calendarCheck",
+                                        icon: "graduationCap",
                                         href: "/documents/expired",
                                         items: []
                                     },
                                     {
                                         title: "Community",
-                                        icon: "calendarCheck",
+                                        icon: "messageSquare",
                                         href: "/documents/active",
                                         items: []
                                     }

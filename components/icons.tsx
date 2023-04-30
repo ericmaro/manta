@@ -35,7 +35,17 @@ import {
   Calendar,
   CalendarClock,
   CalendarX as CalendarXIcon,
-  CalendarCheck
+  CalendarCheck,
+  LayoutDashboard,
+  Settings2,
+  Wrench,
+  MessageSquare,
+  UserCog,
+  Book,
+  GraduationCap,
+  ShieldCheck,
+  CalendarX,
+  
 
 } from "lucide-react"
 
@@ -88,8 +98,19 @@ export const Icons = {
   library: Library,
   event: Calendar,
   calendarClock: CalendarClock,
-  calendarX: CalendarXIcon,
   calendarCheck: CalendarCheck,
+  layoutDashboard: LayoutDashboard,
+  settings2: Settings2,
+  wrench: Wrench,
+  messageSquare: MessageSquare,
+  userCog: UserCog,
+  book: Book,
+  graduationCap: GraduationCap,
+  shieldCheck: ShieldCheck,
+  calendarX: CalendarX,
+
+  
+  
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path

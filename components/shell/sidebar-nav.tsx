@@ -79,6 +79,11 @@ export function SidebarNavItemsComponent({
                 borderRadius: "10px",
                 height: "100%",
                 ":hover": { bg: theme.colors.brand[1], color: theme.colors.brand[6] },
+                
+                ...(pathname === item.href && {
+                  bg: theme.colors.brand[1],
+                  color: theme.colors.brand[6],
+                }),
               })}
               target={item.external ? "_blank" : ""}
               rel={item.external ? "noreferrer" : ""}

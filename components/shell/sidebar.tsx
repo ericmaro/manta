@@ -28,7 +28,7 @@ function Sidebar() {
                                 items: [
                                     {
                                         title: "Overview",
-                                        icon: "playCircle",
+                                        icon: "layoutDashboard",
                                         href: "/",
                                         items: [
                                       
@@ -65,7 +65,7 @@ function Sidebar() {
                                     },
                                     {
                                         title: "Expired",
-                                        icon: "calendarCheck",
+                                        icon: "calendarX",
                                         href: "/documents/expired",
                                         items: []
                                     },
