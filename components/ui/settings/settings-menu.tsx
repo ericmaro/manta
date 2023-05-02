@@ -1,10 +1,13 @@
 import { SidebarNav } from "@/components/shell/sidebar-nav";
 import { Box, Flex } from "@mantine/core";
+// @ts-ignore
+import { usePathname } from "next/navigation"
 
 
 
 function SettingsMenu() {
-
+    const pathname = usePathname()
+    const workspace = pathname?.split("/")[1]
     return (
         <Flex sx={(theme) => ({
             width: 240,
@@ -25,7 +28,7 @@ function SettingsMenu() {
                                     {
                                         title: "Overview",
                                         icon: "settings2",
-                                        href: "/settings",
+                                        href: `/${workspace}/settings`,
                                         items: [
 
                                         ]
@@ -33,19 +36,25 @@ function SettingsMenu() {
                                     {
                                         title: "General",
                                         icon: "wrench",
-                                        href: "/settings/general",
+                                        href:`/${workspace}/settings/general`,
                                         items: []
                                     },
                                     {
                                         title: "Security",
                                         icon: "shieldCheck",
-                                        href: "/settings/security",
+                                        href: `/${workspace}/settings/security`,
+                                        items: []
+                                    },
+                                    {
+                                        title: "Members",
+                                        icon: "users",
+                                        href: `/${workspace}/settings/members`,
                                         items: []
                                     },
                                     {
                                         title: "Profile",
                                         icon: "userCog",
-                                        href: "/settings/profile",
+                                        href: `/${workspace}/settings/profile`,
                                         items: []
                                     }
                                 ]
@@ -56,19 +65,19 @@ function SettingsMenu() {
                                     {
                                         title: "Documentation",
                                         icon: "book",
-                                        href: "/documents/upcoming",
+                                        href: `/${workspace}/settings/documentation`,
                                         items: []
                                     },
                                     {
                                         title: "Tutorials",
                                         icon: "graduationCap",
-                                        href: "/documents/expired",
+                                        href: `/${workspace}/settings/tutorials`,
                                         items: []
                                     },
                                     {
                                         title: "Community",
                                         icon: "messageSquare",
-                                        href: "/documents/active",
+                                        href: `/${workspace}/settings/community`,
                                         items: []
                                     }
                                 ]
@@ -77,9 +86,6 @@ function SettingsMenu() {
                     }
                 />
             </Box>
-
-
-
 
         </Flex>
     );

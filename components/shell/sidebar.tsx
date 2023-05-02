@@ -2,9 +2,13 @@ import { Box, Flex, Navbar } from "@mantine/core";
 import { SidebarNav } from "./sidebar-nav";
 import { Brand } from "./brand";
 import { User } from "./user";
+// @ts-ignore
+import { usePathname } from "next/navigation"
 
 
 function Sidebar() {
+    const pathname = usePathname()
+    const workspace = pathname?.split("/")[1]
 
     return (
         <Flex sx={(theme) => ({
@@ -29,7 +33,7 @@ function Sidebar() {
                                     {
                                         title: "Overview",
                                         icon: "layoutDashboard",
-                                        href: "/",
+                                        href: `/${workspace}`,
                                         items: [
                                       
                                         ]
@@ -37,19 +41,19 @@ function Sidebar() {
                                     {
                                         title: "Documents",
                                         icon: "fileText",
-                                        href: "/documents",
+                                        href: `/${workspace}/documents`,
                                         items: []
                                     },
                                     {
                                         title: "Events",
                                         icon: "calendarClock",
-                                        href: "/events",
+                                        href: `/${workspace}/events`,
                                         items: []
                                     },
                                     {
                                         title: "Settings",
                                         icon: "settings",
-                                        href: "/settings",
+                                        href: `/${workspace}/settings`,
                                         items: []
                                     }
                                 ]
@@ -60,19 +64,19 @@ function Sidebar() {
                                     {
                                         title: "Upcoming",
                                         icon: "calendarClock",
-                                        href: "/documents/upcoming",
+                                        href: `/${workspace}/documents/upcoming`,
                                         items: []
                                     },
                                     {
                                         title: "Expired",
                                         icon: "calendarX",
-                                        href: "/documents/expired",
+                                        href: `/${workspace}/documents/expired`,
                                         items: []
                                     },
                                     {
                                         title: "Active",
                                         icon: "calendarCheck",
-                                        href: "/documents/active",
+                                        href: `/${workspace}/documents/active`,
                                         items: []
                                     }
                                 ]

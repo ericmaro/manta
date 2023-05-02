@@ -45,6 +45,7 @@ import {
   GraduationCap,
   ShieldCheck,
   CalendarX,
+  Users,
   
 
 } from "lucide-react"
@@ -108,9 +109,7 @@ export const Icons = {
   graduationCap: GraduationCap,
   shieldCheck: ShieldCheck,
   calendarX: CalendarX,
-
-  
-  
+  users: Users,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
