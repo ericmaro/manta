@@ -12,7 +12,7 @@ function SettingsShell(props: Props) {
     return (
         <Box sx={(theme)=>({display:'flex', height:'100%'})}>
             <SettingsMenu />
-            <Box p="md">
+            <Box sx={(theme)=>({display:'flex', flex:"1", flexDirection:"column", height:'100%'})}  p="md">
                 {children}
             </Box>
         </Box>

@@ -1,9 +1,10 @@
 
 import Head from 'next/head'
 import Shell from '@/components/shell'
-import { Text } from '@mantine/core'
+import { Avatar, Box, Button, Input, Text, TextInput } from '@mantine/core'
 import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
 import SettingsShell from '@/components/ui/settings/settings-shell'
+import { fakeUser } from '@/mock/users'
 
 export default function Profile() {
   return (
@@ -19,7 +20,25 @@ export default function Profile() {
 
         </ShellTopBarLeft>
         <SettingsShell>
-          <Text>Profile</Text>
+          <Box>
+
+            <Box mb="md">
+              <Avatar size="200px" radius="200px" src={fakeUser.avatar} />
+            </Box>
+
+            <Box mb="md">
+              <Text size="sm">Email</Text>
+              <Text size="sm" color='dimmed'>{fakeUser.email}</Text>
+            </Box>
+
+            <Box mb="md" w={360}>
+              <TextInput label="Full Name" placeholder="Name" defaultValue={fakeUser.name} />
+            </Box>
+
+            <Button  color="brand">Save</Button>
+          </Box>
+
+
         </SettingsShell>
 
 

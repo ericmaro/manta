@@ -46,6 +46,7 @@ import {
   ShieldCheck,
   CalendarX,
   Users,
+  MoreHorizontal,
   
 
 } from "lucide-react"
@@ -110,6 +111,7 @@ export const Icons = {
   shieldCheck: ShieldCheck,
   calendarX: CalendarX,
   users: Users,
+  moreHorizontal: MoreHorizontal,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
