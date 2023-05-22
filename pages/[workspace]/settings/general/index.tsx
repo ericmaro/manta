@@ -4,7 +4,6 @@ import Shell from '@/components/shell'
 import { Avatar, Box, Button, Divider, Text, TextInput } from '@mantine/core'
 import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
 import SettingsShell from '@/components/ui/settings/settings-shell'
-import { fakeUser } from '@/mock/users'
 
 export default function General() {
   return (
@@ -24,7 +23,7 @@ export default function General() {
 
             <Box mb="md">
               <Text size="sm">Logo</Text>
-              <Avatar mb="sm" src={fakeUser.avatar} />
+              <Avatar mb="sm" w={100} h={100} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHRvtFUvNT9Rrpz2HE4gu05hPPg8m7DweCg&usqp=CAU" />
               <Text size="sm" color='dimmed'>Pick a logo for your workspace. Size recommended is 150x150px</Text>
             </Box>
 
@@ -33,7 +32,7 @@ export default function General() {
             </Box>
 
             <Box mb="md" w={360}>
-              <TextInput label="Workspace URL" placeholder="url" defaultValue={fakeUser.name} />
+              <TextInput label="Workspace URL" placeholder="url" defaultValue="test" />
             </Box>
 
             <Button color="brand">Update</Button>

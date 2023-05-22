@@ -1,16 +1,24 @@
 
 import Head from 'next/head'
 import Shell from '@/components/shell'
-import { ActionIcon, Avatar, Box, Button, Divider, Flex, Stack, Text, TextInput, UnstyledButton } from '@mantine/core'
+import { ActionIcon, Avatar, Box, Button, Divider, Flex, ScrollArea, Stack, Text, TextInput } from '@mantine/core'
 import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
 import SettingsShell from '@/components/ui/settings/settings-shell'
 import { Search } from 'lucide-react'
 import { DetailedList } from '@/components/ui/detailed-list'
 import { Icons } from '@/components/icons'
-import { fakeUsers } from '@/mock/users'
+import { getUsers } from '@/services/userServices'
+import { User as UserType } from "types/user"
+import { useQuery } from '@tanstack/react-query'
 
 export default function Members() {
   const MoreIcon = Icons['moreHorizontal'];
+  const { data: users, isLoading } = useQuery<UserType[]>({
+    queryKey: [
+      'users',
+    ],
+    queryFn: getUsers,
+  },);
   return (
     <>
       <Head>
@@ -31,20 +39,26 @@ export default function Members() {
               placeholder="Search by name or email"
               withAsterisk
             />
-            <Button>
+            <Button
+            color='brand'
+            >
               Invite Members
             </Button>
           </Flex>
-          <Stack mt={30}>
-            {fakeUsers.map((user) => (
+          <Box sx={{flex:1, height:'100%'}}  my={7} pb={18}>
+            <ScrollArea.Autosize
+            h={'100%'}
+            >
+
+                {users?.map((user) => (
               <Box key={user.id}>
                 <DetailedList
 
-                  title={user.name}
+                  title={`${user.firstName} ${user.lastName}`}
                   description={user.email}
-                  middle={<Text size="sm">{user.role}</Text>}
+                  middle={<Text size="sm">{user.domain}</Text>}
                   leading={<Avatar
-                    src={user.avatar}
+                    src={user.image}
                     radius="xl"
                   />}
                   trailing={<ActionIcon>
@@ -54,8 +68,10 @@ export default function Members() {
                 <Divider />
               </Box>
             ))}
+            </ScrollArea.Autosize>
+          
 
-          </Stack>
+          </Box>
         </SettingsShell>
       </Shell>
     </>

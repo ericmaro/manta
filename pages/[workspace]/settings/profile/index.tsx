@@ -1,12 +1,20 @@
 
 import Head from 'next/head'
 import Shell from '@/components/shell'
-import { Avatar, Box, Button, Input, Text, TextInput } from '@mantine/core'
+import { Avatar, Box, Button, Input, Skeleton, Text, TextInput } from '@mantine/core'
 import ShellTopBarLeft from '@/components/shell/shell-top-bar-left'
 import SettingsShell from '@/components/ui/settings/settings-shell'
-import { fakeUser } from '@/mock/users'
+import { useQuery } from '@tanstack/react-query'
+import { getUser } from '@/services/userServices'
+import { User as UserType } from "types/user"
 
 export default function Profile() {
+  const { data: user, isLoading } = useQuery<UserType>({
+    queryKey: [
+      'user',
+    ],
+    queryFn: getUser,
+  },);
   return (
     <>
       <Head>
@@ -21,27 +29,24 @@ export default function Profile() {
         </ShellTopBarLeft>
         <SettingsShell>
           <Box>
-
             <Box mb="md">
-              <Avatar size="200px" radius="200px" src={fakeUser.avatar} />
+              {isLoading && <Skeleton height={200} circle />}
+              {!isLoading && <Avatar size="200px" radius="200px" src={user?.image} />}
             </Box>
 
             <Box mb="md">
               <Text size="sm">Email</Text>
-              <Text size="sm" color='dimmed'>{fakeUser.email}</Text>
+              {isLoading && <Skeleton height={20} mt={6} width="180px" radius="xl" />}
+              {!isLoading && <Text size="sm" color='dimmed'>{user?.email}</Text>}
             </Box>
 
             <Box mb="md" w={360}>
-              <TextInput label="Full Name" placeholder="Name" defaultValue={fakeUser.name} />
+              <TextInput label="Full Name" placeholder="Name" defaultValue={`${user?.firstName} ${user?.firstName}`} />
             </Box>
 
-            <Button  color="brand">Save</Button>
+            <Button color="brand">Save</Button>
           </Box>
-
-
         </SettingsShell>
-
-
       </Shell>
     </>
   )

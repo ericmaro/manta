@@ -46,6 +46,9 @@ dependencies:
   '@tabler/icons':
     specifier: 1.119.0
     version: 1.119.0(react-dom@18.2.0)(react@18.2.0)
+  '@tanstack/react-query':
+    specifier: 5.0.0-alpha.34
+    version: 5.0.0-alpha.34(react-dom@18.2.0)(react@18.2.0)
   '@tiptap/extension-link':
     specifier: 2.0.0-beta.218
     version: 2.0.0-beta.218(@tiptap/core@2.0.0-beta.218)(@tiptap/pm@2.0.0-beta.218)
@@ -76,6 +79,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.3.1
     version: 13.3.1(eslint@8.39.0)(typescript@5.0.4)
+  framer-motion:
+    specifier: ^10.12.12
+    version: 10.12.12(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
     specifier: 0.175.0
     version: 0.175.0(react@18.2.0)
@@ -180,6 +186,19 @@ packages:
   /@emotion/hash@0.9.0:
     resolution: {integrity: sha512-14FtKiHhy2QoPIzdTcvh//8OyBlknNs2nXRwIhG904opCby3l+9Xaf/wuPvICBF0rc1ZCNBd3nKe9cd2mecVkQ==}
     dev: false
+
+  /@emotion/is-prop-valid@0.8.8:
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
+    requiresBuild: true
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    dev: false
+    optional: true
+
+  /@emotion/memoize@0.7.4:
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    dev: false
+    optional: true
 
   /@emotion/memoize@0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
@@ -894,6 +913,27 @@ packages:
 
   /@tabler/icons@2.17.0:
     resolution: {integrity: sha512-UeJaylOGNRhQKyDlgZfrQ3UPSGlfVQuXcmCsTYeXioKKepibW6VZ3H36Lo1jvBTBkQD2e9m+k2NxwkztOTXwrA==}
+    dev: false
+
+  /@tanstack/query-core@5.0.0-alpha.34:
+    resolution: {integrity: sha512-/59XnJ7LDbEeliPx1xKvwjBNN3tpRUJxbaCn89qr11tjhNq5hRLQ301aQSxSdjvbFCHb8iOsGHzSb/e4m+3LXQ==}
+    dev: false
+
+  /@tanstack/react-query@5.0.0-alpha.34(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-E5vrRIR3oqCE4qZfPRGLWtplrh8tLG9ux7iRDzRx+V7SUFyLLNxK0hi5JdH/KB1WxeGJzCwanC8PUjWRY0QOHQ==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 5.0.0-alpha.34
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@tiptap/core@2.0.0-beta.218(@tiptap/pm@2.0.0-beta.218):
@@ -2124,6 +2164,24 @@ packages:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
       is-callable: 1.2.7
+    dev: false
+
+  /framer-motion@10.12.12(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-DDCqp60U6hR7aUrXj/BXc/t0Sd/U4ep6w/NZQkw898K+u7s+Vv/P8yxq4WTNA86kU9QCsqOgn1Qhz2DpYK0Oag==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tslib: 2.5.0
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
     dev: false
 
   /fs.realpath@1.0.0:

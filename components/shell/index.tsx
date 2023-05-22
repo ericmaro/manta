@@ -11,10 +11,19 @@ type Props = {
 function Shell(props: Props) {
     const { children, p } = props;
 
+
     return (
         <AppShell
-            navbar={<Sidebar />}
+            navbar={<Sidebar  />}
             padding={0}
+            sx={
+                {
+                    height: '100vh',
+                    overflow: 'hidden',
+                }
+            }
+
+            
         >
             <Box>
                 <Topbar />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Title } from '@mantine/core';
 import { ThemeToggle } from './theme-toggle';
+import { Logo } from './logo';
 
 
 export function Brand() {
@@ -18,7 +19,7 @@ export function Brand() {
           }`,
       })}
     >
-      <Title ml="sm" size={20} sx={(theme) => ({ textTransform: "uppercase" })} order={2}>Manta</Title>
+      <Logo />
       <ThemeToggle />
     </Box>
   );

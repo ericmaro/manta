@@ -47,6 +47,7 @@ import {
   CalendarX,
   Users,
   MoreHorizontal,
+  Github,
   
 
 } from "lucide-react"

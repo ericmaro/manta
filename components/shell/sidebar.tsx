@@ -24,7 +24,7 @@ function Sidebar() {
             </Navbar.Section>
             {/* navigation */}
             <Box sx={{ flexGrow: 1, overflowY: 'scroll' }} py="md">
-               <SidebarNav
+                <SidebarNav
                     items={
                         [
                             {
@@ -35,7 +35,7 @@ function Sidebar() {
                                         icon: "layoutDashboard",
                                         href: `/${workspace}`,
                                         items: [
-                                      
+
                                         ]
                                     },
                                     {
@@ -88,7 +88,7 @@ function Sidebar() {
 
             {/* footer */}
             <Navbar.Section>
-                <User />
+                <User/>
             </Navbar.Section>
 
 
@@ -97,3 +97,5 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+//
